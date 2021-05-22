@@ -18,7 +18,7 @@ let currencyHistoryChart = `
         </h3>
         <p id="comparingRate">
         </p>
-        <canvas id="myChart" width="400" height="400"></canvas>
+        <canvas id="myChart"></canvas>
       </div>
   `;
 
