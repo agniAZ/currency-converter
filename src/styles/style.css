@@ -133,3 +133,7 @@ button:focus {
     font-weight: var(--font-bold);
     position:absolute
 }
+
+#exclamationError {
+    color: var(--code-red);
+}

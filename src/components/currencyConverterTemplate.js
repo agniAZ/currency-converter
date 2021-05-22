@@ -1,7 +1,6 @@
 import {
   currencyList,
   exchangeRate,
-  asd
 } from './../services/service.js'
 
 import {
@@ -11,45 +10,45 @@ import {
 let currencyConverterTemplate = document.getElementById('converter');
 
 let currencyConverter = `
-  
 <div class="card p-4 mt-3">
-      <div class="col-md-12 row m-0">
-        <div class="row col-12">
-          <h3>
-          Currency converter
-          </h3>
-        </div>
-        <div class="row mt-5 ml-1" id="errorMsg">
-        </div>
-        <div class="col-sm-10">
-          <div class="currency row mt-5 mb-5 ">
-            <div class="col-sm-9 d-flex justify-content-end">
-              <input type="number" lang="en" step="0.01" id="fromAmount" placeholder="Currency I have" min="0" />
-            </div>
-            <div class="col-sm row d-flex justify-content-end">
-              <select id="selectfirstCurrency">
-              </select>
-            </div>
+  <div class="col-md-12 row m-0">
+    <div class="row col-12">
+      <h3>
+      Currency converter
+      </h3>
+    </div>
+    <div class="row mt-5 ml-1" id="errorMsg">
+    </div>
+    <div id="currencyConverter" class="row col-12 p-0">
+      <div class="col-sm-10">
+        <div class="currency row mt-5 mb-5 ">
+          <div class="col-sm-9 d-flex justify-content-end">
+            <input type="number" lang="en" step="0.01" id="fromAmount" placeholder="Currency I have" min="0" />
           </div>
-          <div class="currency row mt-5 mb-5">
-            <div class="col-sm-9 d-flex justify-content-end">
-              <input type="number" id="toAmount" min="0" disabled/>
-            </div>
-            <div class="col-sm row d-flex justify-content-end">
-              <select id="selectSecondCurrency">
-              </select>
-            </div>
+          <div class="col-sm row d-flex justify-content-end">
+            <select id="selectfirstCurrency">
+            </select>
           </div>
-          
         </div>
-        <div class="middle d-flex justify-content-center col-sm p-0">
-            <span id="exchange">
-              <i class="fas fa-exchange-alt"></i>
-            </span>
+        <div class="currency row mt-5 mb-5">
+          <div class="col-sm-9 d-flex justify-content-end">
+            <input type="number" id="toAmount" min="0" disabled/>
+          </div>
+          <div class="col-sm row d-flex justify-content-end">
+            <select id="selectSecondCurrency">
+            </select>
+          </div>
         </div>
-
+        
+      </div>
+      <div class="middle d-flex justify-content-center col-sm p-0">
+          <span id="exchange">
+            <i class="fas fa-exchange-alt"></i>
+          </span>
       </div>
     </div>
+  </div>
+</div>
 `;
 currencyConverterTemplate.innerHTML = currencyConverter;
 
@@ -59,7 +58,7 @@ const secondCurrencyEl = document.getElementById('selectSecondCurrency');
 const secondAmountEl = document.getElementById('toAmount');
 const exchange = document.getElementById('exchange');
 
-const listOfCurrencies = Object.keys((await currencyList()).rates)
+const listOfCurrencies = await currencyList()
 
 const defaultFirstCurrency = 'EUR';
 const defaultSecondCurrency = 'USD';
@@ -100,8 +99,6 @@ function populateOptionsList() {
 populateOptionsList()
 
 async function createExchange() {
-  
-console.log(asd())
   let amount = firstAmountEl.value
   if (amount >= 1) {
     let firstCurrency = firstCurrencyEl.value;
