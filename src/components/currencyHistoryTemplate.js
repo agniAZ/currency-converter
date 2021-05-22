@@ -13,9 +13,9 @@ let currencyHistoryChart = `
   
       <div class="card p-4 mt-3">
       <div>
-        <h3>
+        <h2>
         Currency history
-        </h3>
+        </h2>
         <p id="comparingRate">
         </p>
         <canvas id="myChart"></canvas>

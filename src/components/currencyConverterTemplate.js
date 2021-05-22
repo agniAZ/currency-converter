@@ -13,9 +13,9 @@ let currencyConverter = `
 <div class="card p-4 mt-3">
   <div class="col-md-12 row m-0">
     <div class="row col-12">
-      <h3>
+      <h2>
       Currency converter
-      </h3>
+      </h2>
     </div>
     <div class="row mt-5 ml-1" id="errorMsg">
     </div>

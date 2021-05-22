@@ -9,9 +9,9 @@ let header = `
     <img src="./src/assets/img/adyen_logo.png" alt="Adyen Logo">
   </div>
   <div class="col pb-3 pt-3 title d-flex">
-    <p class="m-0">
+    <h1 class="m-0">
       Currency converter
-    </p>
+    </h1>
   </div>
 </div>
 

@@ -9,6 +9,7 @@
     --secondary-color: #0abf53;
     --code-red: red;
     --font-size: 1rem;
+    --font-size-bigger: 2rem;
     --font-bold: 600;
 }
 
@@ -27,6 +28,21 @@ body {
 .footer {
     background-color: var(--primary-color);
     max-height: 80px;
+}
+
+h1, h2{
+    
+    font-weight: var(--font-bold);
+}
+
+h1 {
+    font-size: var(--font-size) !important;
+    color: var(--main-bg-color)
+}
+
+h2 {
+    font-size: var(--font-size-bigger) !important;
+    color: var(--primary-color)
 }
 
 .title {
