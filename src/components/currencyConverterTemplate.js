@@ -42,7 +42,7 @@ let currencyConverter = `
         
       </div>
       <div class="middle d-flex justify-content-center col-sm p-0">
-          <span id="exchange">
+          <span id="switchCurrencies">
             <i class="fas fa-exchange-alt"></i>
           </span>
       </div>
@@ -56,7 +56,7 @@ const firstCurrencyEl = document.getElementById('selectfirstCurrency');
 const firstAmountEl = document.getElementById('fromAmount');
 const secondCurrencyEl = document.getElementById('selectSecondCurrency');
 const secondAmountEl = document.getElementById('toAmount');
-const exchange = document.getElementById('exchange');
+const switchCurrencies = document.getElementById('switchCurrencies');
 
 const listOfCurrencies = await currencyList()
 
@@ -71,10 +71,10 @@ firstAmountEl.addEventListener('input', createExchange);
 secondCurrencyEl.addEventListener('change', createExchange);
 secondAmountEl.addEventListener('input', createExchange);
 
-exchange.addEventListener('click', () => {
-  const temp = firstCurrencyEl.value;
+switchCurrencies.addEventListener('click', () => {
+  let switchCurrency = firstCurrencyEl.value;
   firstCurrencyEl.value = secondCurrencyEl.value;
-  secondCurrencyEl.value = temp;
+  secondCurrencyEl.value = switchCurrency;
   createExchange();
 });
 
