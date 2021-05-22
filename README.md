@@ -20,3 +20,5 @@ Feature enables converting one currency into another, and it visualizes the hist
     * Or via localization option to select language (etc. namespaces)
 * Formatter for input with RegEx in order to accept both comma signs and dots
 * Expand with unit and integration tests
+
+## Currency converter is available via ## https://currency-converter-adyen.netlify.app
