@@ -2,7 +2,7 @@
 
 This converter feature was built by plain Javascript
 
-Feature enables converting one currency into another, and it visualizes the history rate currency data in comparison to first selected currency
+Feature enables converting one currency into another, and it provides data visualisation of the currency rate history data in comparison to first selected currency
 
 ### Task list 
 
@@ -10,11 +10,15 @@ Feature enables converting one currency into another, and it visualizes the hist
 - [x] Ability to input the source amount
 - [x] Conversion rates must be pulled from a third-party API. We recommend using https://ratesapi.io/
 
+* Data visualisation of currency rate history
+* Visual error message handling on failing API call
+
 ### Possible improvements
 
 * Refactor/improve date formatting 
 * Add bidirectional conversion 
-* Improve accesibility
+* Optimise API calls
+* Improve accessibility 
 * Enable localization
     * Either by browser language
     * Or via localization option to select language (etc. namespaces)
