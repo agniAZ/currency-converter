@@ -1,6 +1,7 @@
 import {
   currencyList,
   exchangeRate,
+  asd
 } from './../services/service.js'
 
 import {
@@ -13,47 +14,48 @@ let currencyConverter = `
   
 <div class="card p-4 mt-3">
       <div class="col-md-12 row m-0">
-        <h3>
-        Currency converter
-        </h3>
+        <div class="row col-12">
+          <h3>
+          Currency converter
+          </h3>
+        </div>
+        <div class="row mt-5 ml-1" id="errorMsg">
+        </div>
         <div class="col-sm-10">
-          <div class="currency row mt-5 mb-5">
-            <div class="col-sm-9">
+          <div class="currency row mt-5 mb-5 ">
+            <div class="col-sm-9 d-flex justify-content-end">
               <input type="number" lang="en" step="0.01" id="fromAmount" placeholder="Currency I have" min="0" />
             </div>
-            <div class="col-sm row d-flex justify-content-start">
+            <div class="col-sm row d-flex justify-content-end">
               <select id="selectfirstCurrency">
               </select>
             </div>
           </div>
           <div class="currency row mt-5 mb-5">
-            <div class="col-sm-9">
+            <div class="col-sm-9 d-flex justify-content-end">
               <input type="number" id="toAmount" min="0" disabled/>
             </div>
-            <div class="col-sm row d-flex justify-content-start">
-              <select id="selectsecondCurrency">
+            <div class="col-sm row d-flex justify-content-end">
+              <select id="selectSecondCurrency">
               </select>
             </div>
           </div>
           
         </div>
-        <div class="middle d-flex justify-content-center col-sm-2">
+        <div class="middle d-flex justify-content-center col-sm p-0">
             <span id="exchange">
               <i class="fas fa-exchange-alt"></i>
             </span>
         </div>
 
       </div>
-      <div class="row m-1" id="errorMsg">
-      </div>
     </div>
 `;
-
 currencyConverterTemplate.innerHTML = currencyConverter;
 
 const firstCurrencyEl = document.getElementById('selectfirstCurrency');
 const firstAmountEl = document.getElementById('fromAmount');
-const secondCurrencyEl = document.getElementById('selectsecondCurrency');
+const secondCurrencyEl = document.getElementById('selectSecondCurrency');
 const secondAmountEl = document.getElementById('toAmount');
 const exchange = document.getElementById('exchange');
 
@@ -79,7 +81,7 @@ exchange.addEventListener('click', () => {
 
 function populateOptionsList() {
   let firstCurrencyList = document.getElementById("selectfirstCurrency");
-  let secondCurrencyList = document.getElementById("selectsecondCurrency");
+  let secondCurrencyList = document.getElementById("selectSecondCurrency");
 
   listOfCurrencies.forEach(function (item) {
     const optionObj = document.createElement("option");
@@ -98,6 +100,8 @@ function populateOptionsList() {
 populateOptionsList()
 
 async function createExchange() {
+  
+console.log(asd())
   let amount = firstAmountEl.value
   if (amount >= 1) {
     let firstCurrency = firstCurrencyEl.value;
