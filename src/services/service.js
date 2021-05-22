@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 let errorScenario = `
 <div class="col-12 row m-3 p-0"> 
     <i id="exclamationError" class="fas fa-exclamation-triangle col-1 p-0 d-flex justify-content-center"></i>
@@ -14,7 +16,7 @@ export async function currencyList() {
         let currencyList = Object.keys(res.data.rates)
         return currencyList
     } catch (error) {
-        document.getElementById("currencyConverter").innerHTML= errorScenario;
+        document.getElementById("currencyConverter").innerHTML = errorScenario;
     }
 }
 
@@ -25,7 +27,7 @@ export async function exchangeRate(firstCurrency, secondCurrency, amount) {
             let exchangeRates = res.data
             return exchangeRates
         } catch (error) {
-            document.getElementById("currencyConverter").innerHTML= errorScenario;
+            document.getElementById("currencyConverter").innerHTML = errorScenario;
         }
     } else ''
 }
@@ -37,7 +39,7 @@ export async function currencyHistory(firstCurrency, secondCurrency, date) {
 
         return currencyHistory;
     } catch (error) {
-        document.getElementById("comparingRate").innerHTML= errorScenario;
+        document.getElementById("comparingRate").innerHTML = errorScenario;
         document.getElementById('myChart').style.display = 'none'
     }
 }

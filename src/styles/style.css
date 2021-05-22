@@ -7,25 +7,26 @@
     --secondary-bg-color: #F5F5F5;
     --primary-color: #00112c;
     --secondary-color: #0abf53;
-    --code-red : red;
+    --code-red: red;
     --font-size: 1rem;
     --font-bold: 600;
-  }
+}
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-	background-color: var(--main-bg-color) !important;
+    background-color: var(--main-bg-color) !important;
 }
 
 #brand img {
     width: 100%;
-	height:90%;
+    height: 90%;
     align-items: center;
 }
 
-.header, .footer {
+.header,
+.footer {
     background-color: var(--primary-color);
-	max-height: 80px;
+    max-height: 80px;
 }
 
 .title {
@@ -39,8 +40,9 @@ body {
 }
 
 .card {
-	background-color: var(--secondary-bg-color) !important;
+    background-color: var(--secondary-bg-color) !important;
 }
+
 .currency {
     display: flex;
     align-items: center;
@@ -50,13 +52,13 @@ body {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 .currency select {
@@ -88,8 +90,8 @@ input[type=number] {
 
 #exchange {
     font-size: var(--font-size);
-    color:var(--secondary-color);
-    border:2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     background-color: var(--primary-color);
     border-radius: 50%;
     cursor: pointer;
@@ -97,12 +99,12 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     height: 2em;
-	width: 2em;
+    width: 2em;
     transform: rotate(90deg);
 }
 
-#exchange:hover{
-	transition: 1s;
+#exchange:hover {
+    transition: 1s;
     transform: rotate(1turn);
 }
 
@@ -131,7 +133,7 @@ button:focus {
 #errorMsg {
     color: var(--code-red);
     font-weight: var(--font-bold);
-    position:absolute
+    position: absolute
 }
 
 #exclamationError {
