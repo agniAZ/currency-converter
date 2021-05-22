@@ -4,7 +4,6 @@ This converter feature was built by plain Javascript
 
 Feature enables converting one currency into another, and it visualizes the history rate currency data in comparison to first selected currency
 
-
 ### Task list 
 
 - [x] Ability to select the source and target currencies
@@ -20,7 +19,6 @@ Feature enables converting one currency into another, and it visualizes the hist
 * Enable localization
     * Either by browser language
     * Or via option to select language
-
-# currency-converter
-
-# currency-converter
+* Formatter for input with RegEx in order to accept both comma signs and dots
+* Expand with unit and integration tests
+* use Axios for API calls
