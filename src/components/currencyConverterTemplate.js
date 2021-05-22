@@ -114,8 +114,6 @@ async function createExchange() {
   else {
     secondAmountEl.value = ''
     secondAmountEl.placeholder = secondCurrencyInputPlaceholder;
-
-
     document.getElementById("currencyHistory").style.visibility = "hidden";
   }
 }
