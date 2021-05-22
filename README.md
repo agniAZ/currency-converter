@@ -12,6 +12,7 @@ Feature enables converting one currency into another, and it provides data visua
 
 * Data visualisation of currency rate history
 * Visual error message handling on failing API call
+* Possibility to switch currencies
 
 ### Possible improvements
 
