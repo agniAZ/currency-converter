@@ -88,7 +88,7 @@ input[type=number] {
     align-items: center;
 }
 
-#exchange {
+#switchCurrencies {
     font-size: var(--font-size);
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
@@ -103,16 +103,16 @@ input[type=number] {
     transform: rotate(90deg);
 }
 
-#exchange:hover {
+#switchCurrencies:hover {
     transition: 1s;
     transform: rotate(1turn);
 }
 
-#exchange:focus {
+#switchCurrencies:focus {
     outline: 0;
 }
 
-#exchange:active {
+#switchCurrencies:active {
     transform: rotate(90deg) scale(0.9);
 }
 
