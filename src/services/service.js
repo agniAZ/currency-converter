@@ -11,7 +11,7 @@ const errorScenario = `
 
 export async function currencyList() {
     try {
-        const res = await axios.get('http://api.exchangeratesapi.io/v1/latest?access_key=d7e201abe75e487af5e1192fef7ba3c0&')
+        const res = await axios.get(`http://api.exchangeratesapi.io/v1/latest?access_key=d7e201abe75e487af5e1192fef7ba3c0&`)
 
         const currencyList = Object.keys(res.data.rates)
         return currencyList

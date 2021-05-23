@@ -7,7 +7,7 @@ import {
   displayCurrencyHistory
 } from '../currencyhistory/currencyHistoryTemplate.js'
 
-const currencyConverterTemplate = document.getElementById('converter');
+const currencyConverterTemplate = document.querySelector('#converter');
 
 const currencyConverter = `
 <div class="card p-4 mt-3">
@@ -34,7 +34,7 @@ const currencyConverter = `
           <div class="col-sm-10 d-flex justify-content-end">
             <input type="number" id="toAmount" min="0" disabled/>
           </div>
-          <div class="col-sm row d-flex justify-content-end">
+          <div class="col-sm-1 row d-flex justify-content-end">
             <select id="selectSecondCurrency">
             </select>
           </div>
@@ -52,11 +52,11 @@ const currencyConverter = `
 `;
 currencyConverterTemplate.innerHTML = currencyConverter;
 
-const firstCurrencyEl = document.getElementById('selectfirstCurrency');
-const firstAmountEl = document.getElementById('fromAmount');
-const secondCurrencyEl = document.getElementById('selectSecondCurrency');
-const secondAmountEl = document.getElementById('toAmount');
-const switchCurrencies = document.getElementById('switchCurrencies');
+const firstCurrencyEl = document.querySelector('#selectfirstCurrency');
+const firstAmountEl = document.querySelector('#fromAmount');
+const secondCurrencyEl = document.querySelector('#selectSecondCurrency');
+const secondAmountEl = document.querySelector('#toAmount');
+const switchCurrencies = document.querySelector('#switchCurrencies');
 
 const defaultFirstCurrency = 'EUR';
 const defaultSecondCurrency = 'USD';
@@ -78,8 +78,8 @@ switchCurrencies.addEventListener('click', () => {
 
 async function populateOptionsList() {
   const listOfCurrencies = await currencyList()
-  const firstCurrencyList = document.getElementById("selectfirstCurrency");
-  const secondCurrencyList = document.getElementById("selectSecondCurrency");
+  const firstCurrencyList = document.querySelector("#selectfirstCurrency");
+  const secondCurrencyList = document.querySelector("#selectSecondCurrency");
 
   listOfCurrencies.forEach(function (item) {
     const optionObj = document.createElement("option");
@@ -106,15 +106,15 @@ async function createExchange() {
     const conversionResult = exchangeRates.result
     secondAmountEl.value = conversionResult;
     displayCurrencyHistory(firstCurrency, secondCurrency, amount);
-    document.getElementById("errorMsg").innerHTML = "";
+    document.querySelector("#errorMsg").innerHTML = "";
   } 
   else if (amount < 0){
-    document.getElementById("errorMsg").innerHTML= errorMsg;
+    document.querySelector("#errorMsg").innerHTML= errorMsg;
   }
   else {
     secondAmountEl.value = ''
     secondAmountEl.placeholder = secondCurrencyInputPlaceholder;
-    document.getElementById("currencyHistory").style.visibility = "hidden";
+    document.querySelector("#currencyHistory").style.visibility = "hidden";
   }
 }
 createExchange();
