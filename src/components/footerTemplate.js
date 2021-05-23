@@ -1,7 +1,7 @@
 
-let footerTemplate = document.getElementById('footer');
+const footerTemplate = document.querySelector('#footer');
 
-let footer = `
+const footer = `
 <footer class="footer mt-auto fixed-bottom row m-0 pr-1">
 
 <div class="container d-flex flex-row-reverse col-12 m-0">

@@ -37,12 +37,12 @@ h1, h2{
 
 h1 {
     font-size: var(--font-size) !important;
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
 }
 
 h2 {
     font-size: var(--font-size-bigger) !important;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 .title {

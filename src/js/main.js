@@ -1,4 +1,4 @@
 import '../components/headerTemplate.js'
-import '../components/currencyConverterTemplate.js'
+import '../components/currencyconverter/currencyConverterTemplate.js'
 import '../components/footerTemplate.js'
 

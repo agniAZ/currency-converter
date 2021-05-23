@@ -1,7 +1,7 @@
 
-let headerTemplate= document.getElementById('header');
+const headerTemplate= document.querySelector('#header');
 
-let header = `
+const header = `
   
 <div class="header col-12 mb-1">
 <div class="row">
