@@ -1,3 +1,4 @@
+//generates graph populated with data that is being pased in the function with argument(s)
 export function historyChart(secondCurrency, historyToday, historyYesterday, historyLastWeek, historyLastMonth, historyLastYear) {
     const maxValue = (parseFloat(historyToday)+1)
     const labels = [

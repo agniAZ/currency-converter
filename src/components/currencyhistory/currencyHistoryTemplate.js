@@ -12,19 +12,20 @@ const currencyHistoryChartTemplate = document.querySelector('#currencyHistory');
 
 const currencyHistoryChart = `
   
-      <div class="card p-4 mt-3">
+      <div class='card p-4 mt-3'>
       <div>
         <h2>
         Currency history
         </h2>
-        <p id="comparingRate">
+        <p id='comparingRate'>
         </p>
-        <canvas id="myChart"></canvas>
+        <canvas id='myChart'></canvas>
       </div>
   `;
 const defaultFirstCurrency = 'EUR';
 const defaultSecondCurrency = 'USD';
 
+//displays the currency history and if the input amount has a value of at least 1, generates graph
 export async function displayCurrencyHistory(firstCurrency, secondCurrency, amount) {
     const dateToday = formatDate()[0];
     const dateYesterday = formatDate()[1];
@@ -43,8 +44,8 @@ export async function displayCurrencyHistory(firstCurrency, secondCurrency, amou
     
     if (amount >=1) {
         currencyHistoryChartTemplate.innerHTML = currencyHistoryChart;
-        document.querySelector("#currencyHistory").style.visibility="visible"
-        comparingRate.innerText = `Comparing ${secondCurrency} to 1 ${firstCurrency}`
+        document.querySelector('#currencyHistory').style.visibility='visible';
+        comparingRate.innerText = `Comparing ${secondCurrency} to 1 ${firstCurrency}`;
         historyChart(secondCurrency, historyToday, historyYesterday, historyLastWeek, historyLastMonth, historyLastYear);
     } else ''
 }
